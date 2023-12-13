@@ -6,7 +6,7 @@ Welcome to my TechNotes repository! Here, I share a collection of challenges I'v
 # Table of Contents
 
 ## React
-- [**Axios Instance**](https://github.com/WanxiaJaneYang/TechNotes/tree/main/React/axios%20instance): Notes on simplifying error handling in React using Axios.
+- [**Axios Instance**](https://github.com/WanxiaJaneYang/TechNotes/tree/main/React/axios%20instance): Notes on simplifying error handling in React using AxiosInstance.
 - [**Redux**](https://github.com/WanxiaJaneYang/TechNotes/tree/main/React/redux): Insights on state management in React applications using Redux.
 - [**MSW (Mock Service Worker)**](https://github.com/WanxiaJaneYang/TechNotes/tree/main/React/msw): Techniques for using Mock Service Worker in React for testing and development.
 
