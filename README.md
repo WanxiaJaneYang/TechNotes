@@ -6,9 +6,9 @@ Welcome to my TechNotes repository! Here, I share a collection of challenges I'v
 
 ## React
 - [**Axios Instance**](https://github.com/WanxiaJaneYang/TechNotes/tree/main/React/axios%20instance)
-  - [**Simplifying Error Handling in React with Axios**](https://github.com/WanxiaJaneYang/TechNotes/blob/main/React/axios%20instance/Simplifying%20Error%20Handling%20in%20React%20with%20Axios.md): A guide on efficient error handling in React using Axios.
+  - [**Simplifying Error Handling in React with AxiosInstance**](https://github.com/WanxiaJaneYang/TechNotes/blob/main/React/axios%20instance/Simplifying%20Error%20Handling%20in%20React%20with%20Axios.md): A note on efficient error handling in React using AxiosInstance.
 - [**Redux**](https://github.com/WanxiaJaneYang/TechNotes/tree/main/React/redux)
-  - [**Managing Complex State in React with Redux Thunk and Toolkit**](https://github.com/WanxiaJaneYang/TechNotes/blob/main/React/redux/Managing%20Complex%20State%20in%20React%20with%20Redux%20Thunk%20and%20Toolkit.md): Insights into handling complex state management in React using Redux Thunk and Toolkit.
+  - [**Gracefully Handling Asynchronous API State Changes in React Using Redux Thunk and Toolkit**](https://github.com/WanxiaJaneYang/TechNotes/blob/main/React/redux/Managing%20Complex%20State%20in%20React%20with%20Redux%20Thunk%20and%20Toolkit.md): The note primarily focuses on handling asynchronous API calls and managing the resulting state changes across different components in React.
 - [**MSW (Mock Service Worker)**](https://github.com/WanxiaJaneYang/TechNotes/tree/main/React/msw)
   - [**Utilizing MSW for Frontend Development with Unreliable Backend Environments**](https://github.com/WanxiaJaneYang/TechNotes/blob/main/React/msw/Utilizing%20MSW%20for%20Frontend%20Development%20with%20Unreliable%20Backend%20Environments.md): Techniques for using MSW in frontend development, especially when dealing with unreliable backend environments.
 

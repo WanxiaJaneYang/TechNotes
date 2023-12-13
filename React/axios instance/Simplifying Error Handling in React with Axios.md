@@ -1,4 +1,4 @@
-# Simplifying Error Handling in React with Axios
+# Simplifying Error Handling in React with Axios Instance
 
 ## Introduction
 In my recent projects, I've been extensively using React in conjunction with Axios for API interactions. I noticed a pattern in how I was handling errors - it was repetitive and not as efficient as it could be. This blog post will discuss how I identified the issue and streamlined my error handling approach using Axios instances.
