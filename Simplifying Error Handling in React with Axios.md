@@ -12,17 +12,18 @@ Initially, my error handling approach involved giving specific error messages to
 Here is an example of how I was handling these errors:
 
 ```javascript
-axios.get('some-api-endpoint')
-  .then(response => {
-    // Handle successful response
-  })
-  .catch(error => {
-    if (error.response.status === 404) {
-      // Handle 404 error
-    } else if (error.response.status === 500) {
-      // Handle 500 error
+async function fetchData() {
+  try {
+    const response = await axios.get('/some-endpoint');
+    // Handle response
+  } catch (error) {
+    if (error.response && error.response.status === 404) {
+      // Handle 404 Not Found
+    } else if (error.response && error.response.status === 500) {
+      // Handle 500 Server Error
     } // ... and so on
-  });
+  }
+}
 ```
 
 ## The Solution: Centralizing Error Handling with Axios
