@@ -21,6 +21,6 @@ Feel free to browse through the notes for insights or solutions that might help 
 If you have suggestions or improvements, I'm open to contributions! Please feel free to fork the repository and submit a pull request.
 
 ## Contact
-For any questions or feedback, reach out to me at [your-email@example.com].
+For any questions or feedback, reach out to me at [wanxiayang86@gmail.com].
 
 Thank you for visiting my TechNotes!
