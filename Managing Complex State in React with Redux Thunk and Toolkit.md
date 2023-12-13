@@ -29,37 +29,53 @@ export const fetchData = createAsyncThunk(
 );
 ```
 
-### Leveraging extraReducers in createSlice
-To manage the impact of a single API call on multiple slices, I used extraReducers in createSlice. This allowed for seamless updates to different parts of the state in response to a single action.
+### Leveraging `extraReducers` in Multiple Slices
+`extraReducers` in `createSlice` allows for managing the response to a single action across different slices. This is particularly effective when an API call affects multiple parts of the state.
+
+#### Example: Coordinating State Updates Across Slices
+Consider an API call that fetches user data, impacting both the user profile and notifications. Here's how `extraReducers` can be used in two slices to handle this:
 
 ```javascript
-// Example of using extraReducers in createSlice
-import { createSlice } from '@reduxjs/toolkit';
-
-const exampleSlice = createSlice({
-  name: 'example',
-  initialState: {
-    pending: false,
-    error: null,
-    data: null
-  },
-  reducers: {
-    // Standard reducers
-  },
-  extraReducers: (builder) => {
-    builder
-      .addCase(fetchData.fulfilled, (state, action) => {
-        // Update state based on action payload
-      });
-      .addCase(fetchData.pending, (state, action) => {
-        // Update state based on pending
-      });
-      ....
-  },
+// User Profile Slice
+const userProfileSlice = createSlice({
+  name: 'userProfile',
+  initialState: { profile: null, loading: false, error: null },
+  extraReducers: {
+    [fetchData.pending]: (state) => {
+      state.loading = true;
+    },
+    [fetchData.fulfilled]: (state, action) => {
+      state.profile = action.payload.userProfile;
+      state.loading = false;
+    },
+    [fetchData.rejected]: (state, action) => {
+      state.error = action.payload;
+      state.loading = false;
+    }
+  }
 });
 
-export default exampleSlice.reducer;
+// Notifications Slice
+const notificationsSlice = createSlice({
+  name: 'notifications',
+  initialState: { list: [], loading: false, error: null },
+  extraReducers: {
+    [fetchData.pending]: (state) => {
+      state.loading = true;
+    },
+    [fetchData.fulfilled]: (state, action) => {
+      state.list = action.payload.notifications;
+      state.loading = false;
+    },
+    [fetchData.rejected]: (state, action) => {
+      state.error = action.payload;
+      state.loading = false;
+    }
+  }
+});
+
 ```
+In this scenario, the fetchData thunk action triggers updates in both the userProfileSlice and notificationsSlice when it is fulfilled. The payload from the API response contains data for both user profile and notifications, which are then separately updated in their respective slices.
 
 ## Conclusion
 Integrating Redux Thunk and Toolkit has greatly simplified the process of managing complex and interdependent states in React applications. This approach provides a structured and scalable way to handle asynchronous data flow and its impact on the application's state, making the development process more efficient and the application more robust.
