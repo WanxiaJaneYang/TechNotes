@@ -32,6 +32,7 @@ export const fetchData = createAsyncThunk(
 ### Leveraging extraReducers in createSlice
 To manage the impact of a single API call on multiple slices, I used extraReducers in createSlice. This allowed for seamless updates to different parts of the state in response to a single action.
 
+```javascript
 // Example of using extraReducers in createSlice
 import { createSlice } from '@reduxjs/toolkit';
 
