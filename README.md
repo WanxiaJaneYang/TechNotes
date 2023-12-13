@@ -2,15 +2,17 @@
 
 Welcome to my TechNotes repository! Here, I share a collection of challenges I've encountered and the new tools and technologies I've learned in my journey as a junior developer.
 
-## Contents
 # Table of Contents
 
 ## React
-- [**Axios Instance**](https://github.com/WanxiaJaneYang/TechNotes/tree/main/React/axios%20instance): Notes on simplifying error handling in React using Axios.
-- [**Redux**](https://github.com/WanxiaJaneYang/TechNotes/tree/main/React/redux): Insights on state management in React applications using Redux.
-- [**MSW (Mock Service Worker)**](https://github.com/WanxiaJaneYang/TechNotes/tree/main/React/msw): Techniques for using Mock Service Worker in React for testing and development.
+- [**Axios Instance**](https://github.com/WanxiaJaneYang/TechNotes/tree/main/React/axios%20instance)
+  - [**Simplifying Error Handling in React with Axios**](https://github.com/WanxiaJaneYang/TechNotes/blob/main/React/axios%20instance/Simplifying%20Error%20Handling%20in%20React%20with%20Axios.md): A guide on efficient error handling in React using Axios.
+- [**Redux**](https://github.com/WanxiaJaneYang/TechNotes/tree/main/React/redux)
+  - [**Managing Complex State in React with Redux Thunk and Toolkit**](https://github.com/WanxiaJaneYang/TechNotes/blob/main/React/redux/Managing%20Complex%20State%20in%20React%20with%20Redux%20Thunk%20and%20Toolkit.md): Insights into handling complex state management in React using Redux Thunk and Toolkit.
+- [**MSW (Mock Service Worker)**](https://github.com/WanxiaJaneYang/TechNotes/tree/main/React/msw)
+  - [**Utilizing MSW for Frontend Development with Unreliable Backend Environments**](https://github.com/WanxiaJaneYang/TechNotes/blob/main/React/msw/Utilizing%20MSW%20for%20Frontend%20Development%20with%20Unreliable%20Backend%20Environments.md): Techniques for using MSW in frontend development, especially when dealing with unreliable backend environments.
 
-- ... [other categories]
+[...other categories...]
 
 ## How to Use
 Feel free to browse through the notes for insights or solutions that might help in your projects. 
