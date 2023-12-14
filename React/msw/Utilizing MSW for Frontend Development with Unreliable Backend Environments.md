@@ -20,13 +20,20 @@ npx msw init <PUBLIC_DIR>
 In the `src/` directory, I set up a folder for mocks, which included a handler file and a browser configuration file.
 
 #### Mock Handlers (`src/mocks/handlers.js`)
-Here, I defined the mock API responses, replicating the actual backend responses obtained through Postman. This enabled me to simulate backend behavior accurately within my local development environment.
+Here, I defined the mock API responses, replicating the actual backend responses obtained through Postman. It's important to note that the path specified for the mock handlers can be an absolute or relative URL.
+
+- **Absolute Path:** Specifying an absolute path like `baseUrl/login` ensures that the handler will intercept requests to that exact URL.
+
+- **Relative Path:** Alternatively, using a relative path such as `/login` means the path is relative to your application's origin URL. For example, if your frontend runs on `localhost:3000`, a relative path like `/login` will intercept requests to `localhost:3000/login`.
+
+This flexibility in defining paths allows for more precise control over which requests are intercepted and mocked.
 
 ```javascript
 // src/mocks/handlers.js
 import { http, HttpResponse } from 'msw';
 
 const handlers = [
+  //example of absolute path
   http.post('baseUrl/login', ({ request }) => HttpResponse.json(
     {
       // Mock response data with a structure similar to the actual API response
@@ -50,6 +57,7 @@ const worker = setupWorker(...handlers);
 export default worker;
 
 ```
+
 ### Registering and Starting the MSW Worker
 For effective local development, I registered and started the MSW worker at the entry point of my React application. This was crucial for ensuring that the mock server only activated during development, allowing for accurate testing against various simulated backend responses.
 
