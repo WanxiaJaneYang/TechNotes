@@ -24,8 +24,6 @@ After creating the app, navigate to the configuration page on Xero's portal to g
 ## Step 4: Create Custom Connection in Zoho CRM
 Navigate to **Setup > Automation > Connections** in Zoho CRM, select **Custom Services**, and click **Create Service**. Fill in the necessary details for the service.
 
-![Screenshot: CRM Custom Connection](https://previewengine-accl.zohoexternal.com/image/WD/u3yseb61b5d36d4184cdc83368dd7fe5d87a9?version=1.0&width=2046&height=1536)
-
 Details to be entered:
 - **Service Name**: Xero (The Service Link Name will be automatically populated.)
 - **Authentication Type**: OAuth2
